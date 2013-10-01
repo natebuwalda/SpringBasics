@@ -1,17 +1,17 @@
 package co.leantechniques.person.service;
 
 import co.leantechniques.person.domain.Person;
-import co.leantechniques.person.repository.PersonJdbcTemplateRepository;
+import co.leantechniques.person.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BasePersonService implements PersonService {
 
-    private PersonJdbcTemplateRepository personRepository;
+    private PersonRepository personRepository;
 
     @Autowired
-    public BasePersonService(PersonJdbcTemplateRepository personRepository) {
+    public BasePersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
 
